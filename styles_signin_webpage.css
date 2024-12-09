@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .logo {
+    width: 50px; /* Adjust the width to your desired size */
+    height: auto; /* Maintains the aspect ratio */
+    margin-right: 10px;
+    object-fit: contain; /* Ensures the image fits properly within the specified width */
+  }
+  
+  body {
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle at top, #6E5AA5 1%, transparent 20%), 
+              radial-gradient(circle at right, #4EC3E0 1%, transparent 20%),
+              #140F3F; /* Fallback solid background */
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensures it covers the full viewport */
+  background-size: cover;
+  background-attachment: fixed; /* Keeps the gradient fixed on scroll */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+  }
+  
+  .logo {
+    width: 40px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add spacing between the logo and text */
+  }
+  
+  .brand-name {
+    font-size: 20px; /* Adjust the font size */
+    font-weight: bold;
+    color: white;
+  }
+  
+  .brand-name {
+    font-size: 20px; /* Adjust the font size */
+    font-weight: bold;
+    color: white;
+  }
+  
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .navbar nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .newsletter form {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .newsletter input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #3ea8ff;
+    outline: none;
+  }
+  
+  .newsletter button {
+    background: #3ea8ff;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
