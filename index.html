@@ -19,7 +19,7 @@
             <nav>
                 <a href="#">About</a>
                 <a href="#">Sign up</a>
-                <a href="#">Sign in</a>
+                <a href="signin_webpage.html">Sign in</a>
             </nav>
         </header>
 
@@ -27,11 +27,13 @@
             <div class="cardleft">
                 <img src="student1.png" alt="Student Looking for Jobs" class="illustration">
                 <p>Looking for a Part-Time Job? Start Your Journey Here!</p>
-                <button>Apply Now</button>
+                <!-- <div class="button">Apply Now<span class="button-border"></span></div> -->
+                 <button>Apply Now</button>
             </div>
             <div class="cardright">
                 <img src="student2.png" alt="Job Poster" class="illustration">
                 <p>Need skilled help on a budget? Post Your Jobs Now!</p>
+                <!-- <div class="button">Browse Jobs<span class="button-border"></span></div> -->
                 <button>Browse Jobs</button>
             </div>
         </main>
@@ -41,3 +43,64 @@
 </body>
 
 </html>
+.inputbox {
+    position: relative;
+    width: 500px;
+  }
+  
+  .inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  
+  .inputbox input::placeholder {
+      color: #8f8f8f; 
+      opacity: 1; }
+  
+  .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  
+  .inputbox input:valid ~span,
+  .inputbox input:focus ~span {
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0,75em;
+  }
+  
+  .inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #4376b948;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+    border: 2px solid #45f3ff;
+  
+  }
+  
+  .inputbox input:valid ~i,
+  .inputbox input:focus ~i {
+    height: 44px;
+  }

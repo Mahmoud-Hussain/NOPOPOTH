@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
+    <title>Sign In</title>
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="styles_signin_webpage.css">
 </head>
-
 <body>
     <div class="container">
+        <!-- Navbar Section -->
         <header class="navbar">
             <div class="logo-container">
                 <img src="logo.png" alt="Nobopoth Logo" class="logo">
                 <span class="site-name">NOBOPOTH</span>
             </div>
             <nav>
+                <a href="index.html">Dashboard</a>
                 <a href="#">About</a>
                 <a href="#">Sign up</a>
-                <a href="#">Sign in</a>
+                <a href="signin_webpage.html">Sign in</a>
             </nav>
         </header>
 
-        
-
-
+        <!-- Main Section -->
+        <main>
+            <div class="signin-container">
+                <h2 class="signin-title">Sign In</h2>
+                <!-- Input Fields -->
+                <div class="inputbox">
+                    <input type="text" required>
+                    <span>Email Address</span>
+                    <i></i>
+                </div>
+                <div class="inputbox">
+                    <input type="password" required>
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <!-- Submit Button -->
+                <button class="signin-btn">Submit</button>
+            </div>
+        </main>
     </div>
 </body>
-
 </html>
