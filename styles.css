@@ -1,168 +1,239 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .logo {
-    width: 50px; /* Adjust the width to your desired size */
-    height: auto; /* Maintains the aspect ratio */
-    margin-right: 10px;
-    object-fit: contain; /* Ensures the image fits properly within the specified width */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
+
 body {
   font-family: 'Arial', sans-serif;
   background: radial-gradient(circle at top, #6E5AA5 1%, transparent 20%), 
               radial-gradient(circle at right, #4EC3E0 1%, transparent 30%),
-              #140F3F; /* Fallback solid background */
+              #140F3F;
   color: #ffffff;
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Ensures it covers the full viewport */
-  background-size: cover;
-  background-attachment: fixed; /* Keeps the gradient fixed on scroll */
+  height: 100vh;
+  background-attachment: fixed;
 }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: white;
+
+.container {
+  max-width: 1200px; /* Set a fixed width */
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center; /* Ensures vertical alignment */
+  display: flex;
+  align-items: center;
+  margin-right: 9rem;
 }
 
 .logo {
-    width: 40px; /* Adjust the size of the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add spacing between the logo and text */
+  width: 50px;
+  margin-right: 10px;
 }
 
-.brand-name {
-    font-size: 20px; /* Adjust the font size */
-    font-weight: bold;
-    color: white;
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 
-.brand-name {
-    font-size: 20px; /* Adjust the font size */
-    font-weight: bold;
-    color: white;
+.navbar nav {
+  display: flex;
+  gap: 1.5rem; /* Add spacing between nav items */
 }
 
-  
-  .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  
-  .navbar nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 3rem 2rem;
-    flex: 1;
-  }
-  
-  .cardright{
-    text-align: center;
-    padding: 2rem;
-    width: 300px;
-    
-    
-  }
-  
-  .cardright img {
-    width: 150px;
-    margin-bottom: 1rem;
-  }
-  
-  .cardright p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .cardright button {
-    background: #3ea8ff;
-    color: #000000;
-    border: none;
-    padding: 0.8rem 5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  
-  .cardright button:hover {
-    background:#a3c6f3;
-    
-  }
+.navbar nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
-  .cardleft{
-    text-align: center;
-    padding: 2rem;
-    width: 300px;
-  }
-  
-  .cardleft img {
-    width: 150px;
-    margin-bottom: 1rem;
-  }
-  
-  .cardleft p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .cardleft button {
-    background: #140F3F;
-    color: #ffffff;
-    border: 2px solid #95D6F3;
-    padding: 0.7rem 5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  
-  .cardleft button:hover {
-    background: #2c82cc;
-  }
-  .newsletter form {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .newsletter input {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #3ea8ff;
-    outline: none;
-  }
-  
-  .newsletter button {
-    background: #3ea8ff;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+.main-content {
+  display: flex;
+  justify-content: center;
+  gap: 18rem;
+  flex: 1;
+  padding: 3rem 0;
+}
+
+.cardleft, .cardright {
+  text-align: center;
+  width: 300px;
+}
+
+.cardleft p, .cardright p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* .cardleft button, .cardright button {
+  border: none;
+  padding: 0.8rem 5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cardleft button {
+  background: #140F3F;
+  color: #ffffff;
+  border: 2px solid #95D6F3;
+}
+
+.cardleft button:hover {
+  background: #2c82cc;
+}
+
+.cardright button {
+  background: #95D6F3;
+  color: #000000;
+}
+
+.cardright button:hover {
+  background: #a3c6f3;
+} */
+/* From Uiverse.io by TaniaDou */ 
+
+
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f4f0ff;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5rem;
+  background: linear-gradient(
+      180deg,
+      rgba(8, 77, 126, 0) 0%,
+      rgba(8, 77, 126, 0.42) 100%
+    ),
+    rgba(41, 29, 94, 0.24);
+  box-shadow: inset 0 0 12px rgba(151, 196, 255, 0.44);
+  z-index: -1;
+}
+
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      180deg,
+      rgba(8, 77, 126, 0) 0%,
+      rgba(8, 77, 126, 0.42) 100%
+    ),
+    rgba(47, 255, 255, 0.24);
+  box-shadow: inset 0 0 12px rgba(151, 200, 255, 0.44);
+  border-radius: 5rem;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in;
+}
+
+.button:hover::after {
+  opacity: 1;
+}
+
+.button-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5rem;
+  z-index: -1;
+}
+
+.button-border::before {
+  content: "";
+  position: absolute;
+  border-radius: 5rem;
+  padding: 1px;
+  inset: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(184, 238, 255, 0.24) 0%,
+      rgba(184, 238, 255, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(184, 238, 255, 0.32), rgba(184, 238, 255, 0.32));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+
+
+.cardleft button, .cardright button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cardleft button::after , .cardright button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #140F3F;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.cardleft button::before, .cardright button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #140F3F;
+  transition: 0.5s;
+}
+
+.cardleft button:hover::before,.cardright button:hover::before, .cardleft button:hover::after, .cardright button:hover::after {
+  transform: scale(0)
+}
+
+.cardleft button:hover,.cardright button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
