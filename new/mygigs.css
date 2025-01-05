@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.topbar h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.sidebar-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Search and Filter */
+.search-filter {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.filter-dropdown {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Gigs List */
+.gigs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.gig-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: calc(33.333% - 2rem);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gig-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.gig-card h2 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin: 1rem 0 0.5rem;
+}
+
+.gig-card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.gig-card button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.gig-card button:hover {
+    background-color: #0056b3;
+}
+
+.gig-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gig-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .gig-card {
+        width: 100%;
+    }
+
+    .search-filter {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .search-bar, .filter-dropdown {
+        width: 100%;
+    }
+}

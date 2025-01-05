@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+/* Header Styles */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;  /* This ensures the logo stays on the left */
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header .logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header .nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;  /* Aligns the links to the right */
+    align-items: center; /* Ensures the items are vertically centered */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #007BFF, #00BFFF);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.search-bar input {
+    padding: 0.75rem;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #ffaa00;
+}
+
+/* Categories Section */
+.categories {
+    padding: 2rem 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.how-it-works ol {
+    list-style: none;
+    padding: 0;
+}
+
+.how-it-works li {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
