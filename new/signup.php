@@ -36,7 +36,7 @@
                 <button type="submit" class="btn">Sign Up</button>
             </form>
             <div class="signin-link">
-                Already have an account? <a href="signin.html">Sign in here</a>
+                Already have an account? <a href="signin.php">Sign in here</a>
             </div>
         </div>
     </div>

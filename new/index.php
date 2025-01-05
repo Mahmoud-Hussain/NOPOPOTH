@@ -19,8 +19,8 @@
                 <a href="#categories" class="nav-link">Categories</a>
                 <a href="#how-it-works" class="nav-link">How It Works</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="signin.html" class="nav-link">Sign In</a>
-                <a href="signup.html"class="nav-link">Sign Up</a>
+                <a href="signin.php" class="nav-link">Sign In</a>
+                <a href="signup.php" class="nav-link">Sign Up</a>
             </nav>
         </div>
     </header>
@@ -29,8 +29,8 @@
     <section class="hero">
         <div class="container">
             <h1>Find the Perfect Service for Your Needs</h1>
-            <form class="search-bar">
-                <input type="text" placeholder="What service are you looking for?" />
+            <form class="search-bar" action="search.php" method="GET">
+                <input type="text" name="query" placeholder="What service are you looking for?" />
                 <button type="submit">Search</button>
             </form>
         </div>

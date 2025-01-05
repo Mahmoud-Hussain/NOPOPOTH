@@ -28,7 +28,7 @@
                 <button type="submit" class="btn"><a href="freelencer.html">Log In</a></button>
             </form>
             <div class="signup-link">
-                Don't have an account? <a href="signup.html">Sign up here</a>
+                Don't have an account? <a href="signup.php">Sign up here</a>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@
         >&times;</a
       >
       <a href="#">Dashboard</a>
-      <a href="mygigs.html">My Gigs</a>
+      <a href="mygigs.php">My Gigs</a>
       <a href="#">Orders</a>
       <a href="#">Earnings</a>
       <a href="#">Messages</a>

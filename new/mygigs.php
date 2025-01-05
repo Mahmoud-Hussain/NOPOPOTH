@@ -10,7 +10,7 @@
     <!-- Sidebar -->
     <div id="sidebar" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="freelencer.html">Dashboard</a>
+        <a href="freelencer.php">Dashboard</a>
         <a href="#my-gigs">My Gigs</a>
         <a href="#profile">Profile</a>
         <a href="#settings">Settings</a>
