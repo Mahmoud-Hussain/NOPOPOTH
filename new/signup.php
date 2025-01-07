@@ -17,13 +17,28 @@
         <div class="signup-box">
             <h1>Create an Account</h1>
             <form>
-                <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" placeholder="Enter your full name" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" placeholder="Enter first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" placeholder="Enter last name" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Type</label>
+                    <select id="role" required>
+                        <option value="">Select your type</option>
+                        <option value="admin">Admin</option>
+                        <option value="employer">Employer</option>
+                        <option value="student">Student</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
