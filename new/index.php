@@ -49,20 +49,18 @@
         </div>
     </section>
 
-    <section id="how-it-works" class="how-it-works">
+    <footer class="footer">
         <div class="container">
-            <h2>How It Works</h2>
-            <ol>
-                <li>Search for the service you need.</li>
-                <li>Connect with skilled professionals.</li>
-                <li>Complete your project with ease.</li>
-            </ol>
-        </div>
-    </section>
-
-    <footer id="contact" class="footer">
-        <div class="container">
-            <p>&copy; 2024 Nobopoth. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
         </div>
     </footer>
 </body>

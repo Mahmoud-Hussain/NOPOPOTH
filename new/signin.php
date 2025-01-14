@@ -25,7 +25,7 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="btn"><a href="freelencer.php">Log In</a></button>
+                <button type="submit" class="btn"><a href="Student.php">Log In</a></button>
             </form>
             <div class="signup-link">
                 Don't have an account? <a href="signup.php">Sign up here</a>

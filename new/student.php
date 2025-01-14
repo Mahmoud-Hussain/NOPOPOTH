@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freelancer Dashboard - Nobopoth</title>
-    <link rel="stylesheet" href="freelencer.css" />
+    <link rel="stylesheet" href="student.css" />
   </head>
   <body>
     <div id="mySidenav" class="sidenav">
@@ -12,7 +12,6 @@
         >&times;</a
       >
       <a href="#">Dashboard</a>
-      <a href="mygigs.php">My Gigs</a>
       <a href="#">Orders</a>
       <a href="#">Earnings</a>
       <a href="#">Messages</a>

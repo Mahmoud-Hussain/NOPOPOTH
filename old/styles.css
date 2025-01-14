@@ -9,7 +9,7 @@ body {
   font-family: 'Arial', sans-serif;
   background: radial-gradient(circle at top, #6E5AA5 1%, transparent 20%), 
               radial-gradient(circle at right, #4EC3E0 1%, transparent 30%),
-              #140F3F;
+              #d0cbfa;
   color: #ffffff;
   height: 100vh;
   background-attachment: fixed;
@@ -195,10 +195,10 @@ body {
   width: 10em;
   position: relative;
   height: 3.5em;
-  border: 3px ridge #149CEA;
+  border: 3px ridge #7dc5ee;
   outline: none;
   background-color: transparent;
-  color: white;
+  color: rgb(70, 3, 158);
   transition: 1s;
   border-radius: 0.3em;
   font-size: 16px;
@@ -213,7 +213,7 @@ body {
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color: #140F3F;
+  background-color: #d0cbfa;
   transition: 0.5s;
   transform-origin: center;
 }
@@ -226,7 +226,7 @@ body {
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color: #140F3F;
+  background-color: #d0cbfa;
   transition: 0.5s;
 }
 
