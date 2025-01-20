@@ -6,6 +6,7 @@
     <title>Sign In - Nobopoth</title>
     <link rel="stylesheet" href="signin.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="Icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freelancer Dashboard - Nobopoth</title>
     <link rel="stylesheet" href="student.css" />
+    <link rel="Icon" href="image/logo.png" type="image/x-icon">
   </head>
   <body>
     <div id="mySidenav" class="sidenav">

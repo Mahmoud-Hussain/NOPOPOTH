@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Nobopoth</title>
     <link rel="stylesheet" href="signup.css">
+    <link rel="Icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body>
     <!-- Logo Section -->
