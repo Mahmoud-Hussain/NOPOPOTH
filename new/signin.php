@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - Nobopoth</title>
     <link rel="stylesheet" href="signin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Logo Section -->
-    <div class="logo-section">
-        <img src="newlogo-01.png" alt="Nobopoth Logo">
-    </div>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div>
+                    <img src="image/logo.png" alt="Nobopoth Logo">
+                    <span>Nobopoth</span>
+                </div>
+                
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+            </nav>
+        </div>
+    </header>
 
     <!-- Sign-In Form -->
     <div class="signin-container">

@@ -12,8 +12,14 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="Nobopoth Logo">
-                <span>Nobopoth</span>
+                <div>
+                    <img src="image/logo.png" alt="Nobopoth Logo">
+                    <span>Nobopoth</span>
+                </div>
+                <div class="auth-container">
+                    <a href="signin.php" class="nav-link">Sign In</a>
+                    <a href="signup.php" class="nav-link">Sign Up</a>
+                </div>
             </div>
             <nav class="nav">
                 <a href="#" class="nav-link">Home</a>
@@ -21,19 +27,39 @@
                 <a href="#how-it-works" class="nav-link">How It Works</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="signin.php" class="nav-link">Sign In</a>
-                <a href="signup.php" class="nav-link">Sign Up</a>
             </nav>
         </div>
     </header>
     
-    <section class="hero">
+    <section class="hero" style="background-image: url('image/main.jpeg'); background-size: cover; background-position: center;">
         <div class="container">
-            <h1>Find the Perfect Service for Your Needs</h1>
-            <form class="search-bar" action="search.php" method="GET">
+            <h1 class="fade-in">Find the Perfect Service for Your Needs</h1>
+            <form class="search-bar slide-in" action="search.php" method="GET">
+                <select name="category" class="category-dropdown">
+                    <option value="">All Categories</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="writing-translation">Writing & Translation</option>
+                    <option value="video-animation">Video & Animation</option>
+                </select>
                 <input type="text" name="query" placeholder="What service are you looking for?" />
-                <button type="submit">Search</button>
+                <button type="submit"><i class="fas fa-search"></i></button>
             </form>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>1,500+</h3>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Categories</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20K+</h3>
+                    <p>Monthly Users</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -41,11 +67,26 @@
         <div class="container">
             <h2>Explore Categories</h2>
             <div class="category-list">
-                <div class="category-item">Web Development</div>
-                <div class="category-item">Graphic Design</div>
-                <div class="category-item">Digital Marketing</div>
-                <div class="category-item">Writing & Translation</div>
-                <div class="category-item">Video & Animation</div>
+                <div class="category-item bounce">
+                    <img src="image/web_development.jpg" alt="Web Development" style="width: 200px; height: 200px;">
+                    <span>Web Development</span>
+                </div>
+                <div class="category-item bounce">
+                    <img src="image/graphics_design-01.jpg" alt="Graphic Design" style="width: 200px; height: 200px;">
+                    <span>Graphic Design</span>
+                </div>
+                <div class="category-item bounce">
+                    <img src="image/digital_marketing.jpg" alt="Digital Marketing" style="width: 200px; height: 200px;">
+                    <span>Digital Marketing</span>
+                </div>
+                <div class="category-item bounce">
+                    <img src="image/writing and translation.jpg" alt="Writing & Translation" style="width: 200px; height: 200px;">
+                    <span>Writing & Translation</span>
+                </div>
+                <div class="category-item bounce">
+                    <img src="image/video editing.png" alt="Video & Animation" style="width: 200px; height: 200px;">
+                    <span>Video & Animation</span>
+                </div>
             </div>
         </div>
     </section>
@@ -54,17 +95,20 @@
         <div class="container">
             <h2>How It Works</h2>
             <div class="steps">
-                <div class="step">
+                <div class="step slide-in">
+                    <img src="image/step1.jpg" alt="Step 1" style="width: 200px; height: 200px;">
                     <h3>Step 1</h3>
-                    <p>Describe your project and get proposals from freelancers.</p>
+                    <p>Describe your needs and find the best services.</p>
                 </div>
-                <div class="step">
+                <div class="step slide-in">
+                    <img src="image/step2.jpg" alt="Step 2" style="width: 200px; height: 200px;">
                     <h3>Step 2</h3>
-                    <p>Choose the best freelancer for your project.</p>
+                    <p>Compare prices and select the best offer.</p>
                 </div>
-                <div class="step">
+                <div class="step slide-in">
+                    <img src="image/step3.jpg" alt="Step 3" style="width: 200px; height: 200px;">
                     <h3>Step 3</h3>
-                    <p>Collaborate and get your project done.</p>
+                    <p>Get your project done by professionals.</p>
                 </div>
             </div>
         </div>
@@ -72,37 +116,33 @@
 
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2>What Our Users Say</h2>
+            <h2>Testimonials</h2>
             <div class="testimonial-list">
-                <div class="testimonial-item">
-                    <p>"Nobopoth helped me find the perfect freelancer for my project. Highly recommend!"</p>
-                    <span>- User A</span>
+                <div class="testimonial-item fade-in">
+                    <img src="image/user1.jpg" alt="User 1" style="width: 200px; height: 200px;">
+                    <p>"Nobopoth helped me find the perfect web developer for my project!"</p>
+                    <span>- User 1</span>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Great platform with a lot of talented freelancers."</p>
-                    <span>- User B</span>
+                <div class="testimonial-item fade-in">
+                    <img src="image/user2.jpg" alt="User 2" style="width: 200px; height: 200px;">
+                    <p>"Great platform for finding talented freelancers."</p>
+                    <span>- User 2</span>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Easy to use and very efficient."</p>
-                    <span>- User C</span>
+                <div class="testimonial-item fade-in">
+                    <img src="image/user3.jpg" alt="User 3" style="width: 200px; height: 200px;">
+                    <p>"I highly recommend Nobopoth for any service needs."</p>
+                    <span>- User 3</span>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-            </div>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+        <div class="container">   
+            <p>&copy; 2023 Nobopoth. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
