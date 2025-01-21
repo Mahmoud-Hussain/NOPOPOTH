@@ -10,9 +10,11 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo" style="text-align: left;">
-                <img src="image/logo.png" alt="Nobopoth Logo">
-                <span>Nobopoth</span>
+            <div class="logo">
+                <a href="index.php">
+                    <img src="image/logo.png" alt="Nobopoth Logo">
+                    <span>Nobopoth</span>
+                </a>
             </div>
             <nav class="nav">
                 <a href="index.php" class="nav-link">Home</a>

@@ -12,8 +12,10 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="image/logo.png" alt="Nobopoth Logo">
-                <span>Nobopoth</span>
+                <a href="index.php">
+                    <img src="image/logo.png" alt="Nobopoth Logo">
+                    <span>Nobopoth</span>
+                </a>
             </div>
             <nav class="nav">
                 <a href="index.php" class="nav-link">Home</a>

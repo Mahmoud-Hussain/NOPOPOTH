@@ -39,6 +39,12 @@ body {
     align-items: center;
 }
 
+.header .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
 .header .logo img {
     height: 40px;
     margin-right: 10px;
@@ -75,18 +81,17 @@ body {
     width: 80%; /* Adjusted width */
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 10px; /* Reduce the distance between navbar and content to the least */
 }
 
 /* Sign-Up Container */
 .signup-container {
     display: flex;
     background: #FAFAFA; /* Updated background color */
-    padding: 3rem; /* Increased padding */
+    padding: 3rem; 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 1200px; /* Increased max-width */
+    max-width: 1200px; 
     margin-top: 20px; /* Ensure proper spacing between navbar and content */
     margin-bottom: 50px; /* Ensure it doesn't touch the bottom of the page */
 }

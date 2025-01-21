@@ -37,6 +37,12 @@ body {
     align-items: center;
 }
 
+.header .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
 .header .logo img {
     height: 40px;
     margin-right: 10px;
