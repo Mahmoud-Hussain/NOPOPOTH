@@ -16,7 +16,6 @@
                     <img src="image/logo.png" alt="Nobopoth Logo">
                     <span>Nobopoth</span>
                 </div>
-                
             </div>
             <nav class="nav">
                 <a href="#" class="nav-link">Home</a>

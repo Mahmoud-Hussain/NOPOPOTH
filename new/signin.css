@@ -35,7 +35,7 @@ body {
 .header .logo {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensure space between logo and auth links */
+    justify-content: flex-end; /* Align logo to the right */
     width: 100%;
 }
 
