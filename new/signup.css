@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -24,7 +29,7 @@ body {
     padding: 1rem 0; /* Match the height of the signin page */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Align logo to the left and nav to the right */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
 }
@@ -32,14 +37,8 @@ body {
 .header .logo {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Align logo to the right */
-    width: 100%;
 }
 
-.header .logo div {
-    display: flex;
-    align-items: center;
-}
 .header .logo img {
     height: 40px;
     margin-right: 10px;
@@ -49,6 +48,7 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
 }
+
 .header .nav {
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@ body {
     width: 80%; /* Adjusted width */
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 60px; /* Reduce the distance between navbar and content to the least */
+    padding-top: 10px; /* Reduce the distance between navbar and content to the least */
 }
 
 /* Sign-Up Container */
