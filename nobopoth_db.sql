@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2025 at 08:51 PM
+-- Generation Time: Jan 22, 2025 at 01:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -174,14 +174,22 @@ CREATE TABLE `user_skills` (
 
 CREATE TABLE `user_tb` (
   `user_id` int(11) NOT NULL,
-  `first_name` varchar(10) DEFAULT NULL,
-  `last_name` varchar(10) DEFAULT NULL,
-  `e_mail` varchar(30) DEFAULT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `e_mail` varchar(50) DEFAULT NULL,
   `username` varchar(10) DEFAULT NULL,
   `u_password` varchar(50) DEFAULT NULL,
   `date_of_birth` date DEFAULT NULL,
   `user_type` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_tb`
+--
+
+INSERT INTO `user_tb` (`user_id`, `first_name`, `last_name`, `e_mail`, `username`, `u_password`, `date_of_birth`, `user_type`) VALUES
+(1, 'Fairuz', 'Humaira Faiza', 'ffaiza2230972@bscse.uiu.ac.bd', 'faiza12', '$2y$10$JhjQ7MjZy7QCwM/DKfw/lOQHFkZlAi.vu4upduomwc6', NULL, 'student'),
+(2, 'Jannatul', 'Haque Usha', 'jusha2310021@bseee.uiu.ac.bd', 'jusha_21', '$2y$10$CImlgO3RwJ1OHsVWa6vfTOJ.jrcbzsgLAJx99kocNNu', '2003-02-06', 'student');
 
 --
 -- Indexes for dumped tables
@@ -315,7 +323,7 @@ ALTER TABLE `skills_tb`
 -- AUTO_INCREMENT for table `user_tb`
 --
 ALTER TABLE `user_tb`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
