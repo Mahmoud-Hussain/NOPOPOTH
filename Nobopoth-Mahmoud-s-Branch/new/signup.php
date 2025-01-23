@@ -91,11 +91,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $first_name = $_POST["firstname"];
       $last_name = $_POST["lastname"];
       $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-      $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+      $username = $_POST["username"];
       $dateofbirth = $_POST["dob"];
       $type = filter_input(INPUT_POST, "type", FILTER_SANITIZE_SPECIAL_CHARS);
-      $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-      $confirm_password = filter_input(INPUT_POST, "confirm-password", FILTER_SANITIZE_SPECIAL_CHARS);
+      $password = $_POST["password"];
+      $confirm_password = $_POST["confirm-password"];
       $domain = "uiu.ac.bd";
 
       //Check pass

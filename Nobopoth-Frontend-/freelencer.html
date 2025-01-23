@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancer Dashboard - Nobopoth</title>
+    <link rel="stylesheet" href="freelencer.css" />
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        background-color: #f9f9f9;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Sidebar (Sidenav) */
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-color: #d86112;
+        overflow-x: hidden;
+        transition: width 0.5s ease;
+        padding-top: 60px;
+      }
+
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #ffffff;
+        display: block;
+        transition: color 0.3s;
+      }
+
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        cursor: pointer;
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-left: 0;
+        flex: 1;
+        padding: 2rem;
+        background-color: #f4f4f4;
+        overflow-y: auto;
+        transition: margin-left 0.5s ease;
+      }
+
+      .main-content.shifted {
+        margin-left: 250px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .dashboard-section {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .dashboard-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
+      .cards {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        flex: 1;
+        min-width: 200px;
+        background-color: #f4f8fd;
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+        color: #d86112;
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #d86112;
+      }
+
+      .menu-icon {
+        font-size: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">Dashboard</a>
+      <a href="mygigs.html">My Gigs</a>
+      <a href="#">Orders</a>
+      <a href="#">Earnings</a>
+      <a href="#">Messages</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+    </div>
+
+    <!-- Menu Icon -->
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main">
+      <header class="topbar">
+        <div class="welcome">Welcome, [Freelancer Name]</div>
+        <div class="notifications">
+          <span class="icon">🔔</span>
+          <span class="icon">📧</span>
+        </div>
+      </header>
+
+      <section class="dashboard-section">
+        <h1>Dashboard Overview</h1>
+        <div class="cards">
+          <div class="card">
+            <h2>Total Orders</h2>
+            <p>45</p>
+          </div>
+          <div class="card">
+            <h2>Pending Orders</h2>
+            <p>5</p>
+          </div>
+          <div class="card">
+            <h2>Earnings</h2>
+            <p>$2,300</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").classList.add("shifted");
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").classList.remove("shifted");
+      }
+    </script>
+  </body>
+</html>

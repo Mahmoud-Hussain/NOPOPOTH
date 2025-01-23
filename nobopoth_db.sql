@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2025 at 01:27 AM
+-- Generation Time: Jan 23, 2025 at 01:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,6 +32,17 @@ CREATE TABLE `category_tb` (
   `category_name` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `category_tb`
+--
+
+INSERT INTO `category_tb` (`category_id`, `category_name`) VALUES
+(1, 'Web Development'),
+(2, 'Graphic Design'),
+(3, 'Digital Marketing'),
+(4, 'Writing Translation'),
+(5, 'Video Animation');
+
 -- --------------------------------------------------------
 
 --
@@ -40,7 +51,8 @@ CREATE TABLE `category_tb` (
 
 CREATE TABLE `drop_job` (
   `j_id` int(11) NOT NULL,
-  `u_id` int(11) DEFAULT NULL
+  `u_id` int(11) DEFAULT NULL,
+  `added_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -53,7 +65,8 @@ CREATE TABLE `inst_org` (
   `i_o_id` int(11) NOT NULL,
   `i_o_name` varchar(30) DEFAULT NULL,
   `i_o_domain` varchar(10) DEFAULT NULL,
-  `i_o_index` int(11) NOT NULL
+  `i_o_index` int(11) NOT NULL,
+  `added_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -70,7 +83,22 @@ CREATE TABLE `jobs_tb` (
   `start_time` time DEFAULT NULL,
   `location` varchar(30) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
-  `j_status` varchar(10) DEFAULT NULL
+  `j_status` varchar(10) DEFAULT NULL,
+  `added_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `sender_id` int(11) NOT NULL,
+  `receiver_id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -85,7 +113,7 @@ CREATE TABLE `payment_tb` (
   `payedto_id` int(11) DEFAULT NULL,
   `payedby_id` int(11) DEFAULT NULL,
   `amount` float DEFAULT NULL,
-  `p_time` time DEFAULT NULL
+  `p_time` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -114,7 +142,7 @@ CREATE TABLE `review_tb` (
   `j_id` int(11) DEFAULT NULL,
   `rating` int(11) NOT NULL,
   `feedback` varchar(50) DEFAULT NULL,
-  `r_date` date DEFAULT NULL
+  `r_date` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -138,8 +166,7 @@ CREATE TABLE `take_job` (
   `j_id` int(11) NOT NULL,
   `u_id` int(11) DEFAULT NULL,
   `apply_status` varchar(10) DEFAULT NULL,
-  `apply_date` date DEFAULT NULL,
-  `approve_date` date DEFAULT NULL
+  `apply_date` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -180,16 +207,17 @@ CREATE TABLE `user_tb` (
   `username` varchar(10) DEFAULT NULL,
   `u_password` varchar(50) DEFAULT NULL,
   `date_of_birth` date DEFAULT NULL,
-  `user_type` varchar(10) DEFAULT NULL
+  `user_type` varchar(10) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_tb`
 --
 
-INSERT INTO `user_tb` (`user_id`, `first_name`, `last_name`, `e_mail`, `username`, `u_password`, `date_of_birth`, `user_type`) VALUES
-(1, 'Fairuz', 'Humaira Faiza', 'ffaiza2230972@bscse.uiu.ac.bd', 'faiza12', '$2y$10$JhjQ7MjZy7QCwM/DKfw/lOQHFkZlAi.vu4upduomwc6', NULL, 'student'),
-(2, 'Jannatul', 'Haque Usha', 'jusha2310021@bseee.uiu.ac.bd', 'jusha_21', '$2y$10$CImlgO3RwJ1OHsVWa6vfTOJ.jrcbzsgLAJx99kocNNu', '2003-02-06', 'student');
+INSERT INTO `user_tb` (`user_id`, `first_name`, `last_name`, `e_mail`, `username`, `u_password`, `date_of_birth`, `user_type`, `created_at`) VALUES
+(1, 'Fairuz', 'Humaira Faiza', 'ffaiza2230972@bscse.uiu.ac.bd', 'faiza12', '$2y$10$JhjQ7MjZy7QCwM/DKfw/lOQHFkZlAi.vu4upduomwc6', NULL, 'student', '2025-01-23 11:27:04'),
+(2, 'Jannatul', 'Haque Usha', 'jusha2310021@bseee.uiu.ac.bd', 'jusha_21', '$2y$10$CImlgO3RwJ1OHsVWa6vfTOJ.jrcbzsgLAJx99kocNNu', '2003-02-06', 'student', '2025-01-23 11:27:04');
 
 --
 -- Indexes for dumped tables
@@ -221,6 +249,14 @@ ALTER TABLE `jobs_tb`
   ADD PRIMARY KEY (`job_id`),
   ADD KEY `start_time` (`start_time`),
   ADD KEY `category_id` (`category_id`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sender_id` (`sender_id`),
+  ADD KEY `receiver_id` (`receiver_id`);
 
 --
 -- Indexes for table `payment_tb`
@@ -287,7 +323,7 @@ ALTER TABLE `user_tb`
 -- AUTO_INCREMENT for table `category_tb`
 --
 ALTER TABLE `category_tb`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `inst_org`
@@ -299,7 +335,13 @@ ALTER TABLE `inst_org`
 -- AUTO_INCREMENT for table `jobs_tb`
 --
 ALTER TABLE `jobs_tb`
-  MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `payment_tb`
@@ -323,7 +365,7 @@ ALTER TABLE `skills_tb`
 -- AUTO_INCREMENT for table `user_tb`
 --
 ALTER TABLE `user_tb`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -343,6 +385,13 @@ ALTER TABLE `jobs_tb`
   ADD CONSTRAINT `jobs_tb_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category_tb` (`category_id`),
   ADD CONSTRAINT `jobs_tb_ibfk_2` FOREIGN KEY (`start_time`) REFERENCES `time_slot` (`start_time`),
   ADD CONSTRAINT `jobs_tb_ibfk_3` FOREIGN KEY (`category_id`) REFERENCES `category_tb` (`category_id`);
+
+--
+-- Constraints for table `messages`
+--
+ALTER TABLE `messages`
+  ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`sender_id`) REFERENCES `user_tb` (`user_id`),
+  ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`receiver_id`) REFERENCES `user_tb` (`user_id`);
 
 --
 -- Constraints for table `payment_tb`

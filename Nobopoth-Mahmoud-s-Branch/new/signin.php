@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - Nobopoth</title>
     <link rel="stylesheet" href="signin.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https:fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="Icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body>
@@ -28,7 +28,7 @@
     <div class="signin-container">
         <div class="signin-box">
             <h1>Sign In</h1>
-            <form method = "post" action ="">
+            <form method="post" action="">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -37,7 +37,7 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" name="login" class="btn"><a>Log In</a></button>
+                <button type="submit" name="login" class="btn"><a href="student.php">Log In</a></button>
             </form>
             <div class="signup-link">
                 Don't have an account? <a href="signup.php">Sign up here</a>
@@ -49,7 +49,7 @@
 <?php
 //LOGIN
 session_start();
-include ("db_connect.php") ;
+include("db_connect.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" ) {
     if(isset($_POST["login"])){
@@ -61,9 +61,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" ) {
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
-
+         
         if ($result->num_rows === 1) {
            $user = $result->fetch_assoc();
+
+              echo $user["user_id"]."<br";
+              echo $user["first_name"]."<br>";
+              echo $user["e_mail"]."<br>";
+              echo $user["user_type"]."<br>";
+              echo $user["u_password"]."<br>";
 
         if (password_verify($password, $user['u_password'])) {
             $_SESSION['user_id'] = $user['user_id'];
@@ -104,14 +110,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" ) {
           $result = $stmt->get_result();
 
         if ($result->num_rows === 1) {
-            $new_pass= filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-            $confirm_pass= filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-            if ($password !== $confirm_password) {
+            $new_pass= filter_input(INPUT_POST, "new_password", FILTER_SANITIZE_SPECIAL_CHARS);
+            $confirm_pass= filter_input(INPUT_POST, "confirm_password", FILTER_SANITIZE_SPECIAL_CHARS);
+            if ($new_pass !== $confirm_pass) {
                 echo "Passwords do not match. Please try again.";
                 exit;
                }
             else{
-                $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+                $hashedpassword = password_hash($new_pass, PASSWORD_DEFAULT);
                 $sql = "UPDATE user_tb SET u_password=? WHERE e_mail=? AND username = ?";
                 $stmt = $conn->prepare($sql);
                 $stmt->bind_param('sss',$hashedpassword, $email, $username);

@@ -1,3 +1,38 @@
+<?php
+session_start();
+include("db_connect.php");
+if(isset($_POST["search"])){
+    $category = $_POST["category"];
+    if($category ==="web-development"){
+        $categoryId = 1;
+        $_SESSION["category_id"] = $categoryId;
+        header("Location: index_search.php");
+    }
+    elseif($category ==="graphic-design"){
+        $categoryId = 2;
+        $_SESSION["category_id"] = $categoryId;
+        header("Location: index_search.php");
+    }
+    elseif($category ==="digital-marketing"){
+        $categoryId = 3;
+        $_SESSION["category_id"] = $categoryId;
+        header("Location: index_search.php");
+    }
+    elseif($category ==="writing-translation"){
+        $categoryId = 4;
+        $_SESSION["category_id"] = $categoryId;
+        header("Location: index_search.php");
+    }
+    elseif($category ==="video-animation"){
+        $categoryId = 5;
+        $_SESSION["category_id"] = $categoryId;
+        header("Location: index_search.php");
+    }
+    else{
+        echo "No category selected";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,17 +71,17 @@
     <section class="hero" style="background-image: url('image/main.jpeg'); background-size: cover; background-position: center;">
         <div class="container">
             <h1 class="fade-in">Find the Perfect Service for Your Needs</h1>
-            <form class="search-bar slide-in" action="search.php" method="GET">
+            <form class="search-bar slide-in" action="" method="POST">
                 <select name="category" class="category-dropdown">
                     <option value="">All Categories</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="graphic-design">Graphic Design</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="writing-translation">Writing & Translation</option>
-                    <option value="video-animation">Video & Animation</option>
+                    <option value="web-development" name="web-development">Web Development</option>
+                    <option value="graphic-design" name="graphic-design">Graphic Design</option>
+                    <option value="digital-marketing" name="digital-marketing">Digital Marketing</option>
+                    <option value="writing-translation" name="writing-translation">Writing & Translation</option>
+                    <option value="video-animation" name="video-animation">Video & Animation</option>
                 </select>
                 <input type="text" name="query" placeholder="What service are you looking for?" />
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <button type="submit" name="search"><i class="fas fa-search"></i></button>
             </form>
             <div class="stats">
                 <div class="stat-item">
