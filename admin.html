@@ -8,7 +8,7 @@
 </head>
 <body>
 
-
+  <!-- Top Navbar -->
   <div class="navbar">
     <div class="navbar-left">
       <a href="#">Welcome [Admin's name]</a>
@@ -24,16 +24,82 @@
           <p>Digital Marketing</p>
         </div>
       </div>
-      <a href="#">Jobs</a>
-      <a href="#">Reviews</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-btn">Jobs</a>
+        <div class="dropdown-menu">
+          <p>Full-Time</p>
+          <p>Part-Time</p>
+          <p>Freelance</p>
+          <p>Internship</p>
+        </div>
+      </div>
     </div>
     <div class="navbar-right">
-      <button class="review-btn">Open Reviews</button>
-      <button class="chatbot-btn">Open Chatbot</button>
+      <a href="#" class="review-btn">Reviews</a>
+      <a href="#" class="chatbot-btn">Chatbot</a>
+      <a href="#" class="students-btn">Enrolled Students</a>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="stats">
+    <div class="stat-box">
+      <h3>TOTAL POSTED JOBS</h3>
+      <p>10</p>
+    </div>
+    <div class="stat-box">
+      <h3>Pending Orders</h3>
+      <p>20</p>
+    </div>
+    <div class="stat-box">
+      <h3>TOTAL DONE JOBS</h3>
+      <p>10</p>
+    </div>
+  </div>
+
+  <!-- Applied Requests Section -->
+  <div class="dashboard">
+    <div class="applied-requests">
+      <h3>Applied Requests</h3>
+      <p>No requests at the moment.</p>
+    </div>
+  </div>
+
+  <!-- Review Modal -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeReview">&times;</span>
+      <h2>Reviews Section</h2>
+      <p>Here you can view and add reviews.</p>
+    </div>
+  </div>
+
+  <!-- Chatbot Box -->
+  <div id="chatbotBox" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeChatbot">&times;</span>
+      <h2>Chat with AI</h2>
+      <div id="chatbotContainer">
+        <!-- Chatbot interface goes here -->
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatInput" placeholder="Type a message...">
+        <button id="sendChat">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enrolled Students Box -->
+  <div id="studentBox" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeStudent">&times;</span>
+      <h2>Enrolled Students</h2>
+      <div id="studentContainer">
+        <p>No students enrolled yet.</p>
+      </div>
     </div>
   </div>
 
   <script src="admin.js"></script>
-
 </body>
 </html>
