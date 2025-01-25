@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Nobopoth</title>
     <link rel="stylesheet" href="signup.css">
-    <link rel="Icon" href="image/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -16,7 +17,9 @@
                     <span>Nobopoth</span>
                 </a>
             </div>
-            <nav class="nav">
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
+            <nav class="nav" id="nav">
                 <a href="index.php" class="nav-link">Home</a>
             </nav>
         </div>
@@ -28,6 +31,7 @@
         <div class="signup-container">
             <div class="signup-box">
                 <h1>Create an Account</h1>
+                <p>Join Nobopoth to discover the best services for your needs.</p>
                 <form>
                     <div class="form-group">
                         <label for="firstname">First Name</label>
@@ -70,5 +74,13 @@
             </div>
         </div>
     </div>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
