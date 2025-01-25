@@ -26,29 +26,92 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.classList.remove('active');
     });
 
-    // Expand/Collapse Reviews
-    const reviewsSection = document.querySelector('.reviews');
-    const reviewCloseBtn = reviewsSection.querySelector('.close-btn');
-
-    reviewsSection.addEventListener('click', () => {
-        reviewsSection.classList.toggle('expanded');
-    });
-
-    reviewCloseBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        reviewsSection.classList.remove('expanded');
-    });
-
-    // Expand/Collapse Messages
+    // Expand/Collapse Messages Section
     const messagesSection = document.querySelector('.messages');
-    const messageCloseBtn = messagesSection.querySelector('.close-btn');
+    const messageItems = document.querySelectorAll('.message-item');
+    const dashboardSearchContainer = document.querySelector('.dashboard-search-container');
+    const popularJobs = document.querySelector('.popular-jobs');
+    const reviewsSection = document.querySelector('.reviews');
+    const reviewItems = document.querySelectorAll('.review-item');
 
-    messagesSection.addEventListener('click', () => {
-        messagesSection.classList.toggle('expanded');
+    // Create close button for messages
+    const messagesCloseBtn = document.createElement('span');
+    messagesCloseBtn.className = 'close-btn';
+    messagesCloseBtn.innerHTML = '<i class="fas fa-times"></i>'; // Font Awesome close icon
+    messagesSection.appendChild(messagesCloseBtn);
+
+    // Create close button for reviews
+    const reviewsCloseBtn = document.createElement('span');
+    reviewsCloseBtn.className = 'close-btn';
+    reviewsCloseBtn.innerHTML = '<i class="fas fa-times"></i>'; // Font Awesome close icon
+    reviewsSection.appendChild(reviewsCloseBtn);
+
+    // Message input bar
+    const messageInputBar = document.createElement('div');
+    messageInputBar.className = 'message-input-bar';
+    messageInputBar.innerHTML = `
+        <input type="text" placeholder="Type your message...">
+        <button><i class="fas fa-paper-plane"></i></button>
+    `;
+    messagesSection.appendChild(messageInputBar);
+
+    // Expand messages section
+    messageItems.forEach(messageItem => {
+        messageItem.addEventListener('click', function () {
+            // Expand the messages section
+            messagesSection.classList.add('expanded');
+
+            // Shrink and fade other sections
+            dashboardSearchContainer.style.transform = 'scale(0.8)';
+            popularJobs.style.transform = 'scale(0.8)';
+            reviewsSection.style.transform = 'scale(0.8)';
+            dashboardSearchContainer.style.opacity = '0.5';
+            popularJobs.style.opacity = '0.5';
+            reviewsSection.style.opacity = '0.5';
+        });
     });
 
-    messageCloseBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
+    // Close the expanded messages section
+    messagesCloseBtn.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevent event bubbling
         messagesSection.classList.remove('expanded');
+
+        // Restore other sections
+        dashboardSearchContainer.style.transform = 'scale(1)';
+        popularJobs.style.transform = 'scale(1)';
+        reviewsSection.style.transform = 'scale(1)';
+        dashboardSearchContainer.style.opacity = '1';
+        popularJobs.style.opacity = '1';
+        reviewsSection.style.opacity = '1';
+    });
+
+    // Expand reviews section
+    reviewItems.forEach(reviewItem => {
+        reviewItem.addEventListener('click', function () {
+            // Expand the reviews section
+            reviewsSection.classList.add('expanded');
+
+            // Shrink and fade other sections
+            dashboardSearchContainer.style.transform = 'scale(1)';
+            popularJobs.style.transform = 'scale(1)';
+            messagesSection.style.transform = 'scale(1)';
+            dashboardSearchContainer.style.opacity = '1';
+            popularJobs.style.opacity = '1';
+            messagesSection.style.opacity = '1';
+        });
+    });
+
+    // Close the expanded reviews section
+    reviewsCloseBtn.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevent event bubbling
+        reviewsSection.classList.remove('expanded');
+
+        // Restore other sections
+        dashboardSearchContainer.style.transform = 'scale(1)';
+        popularJobs.style.transform = 'scale(1)';
+        messagesSection.style.transform = 'scale(1)';
+        dashboardSearchContainer.style.opacity = '1';
+        popularJobs.style.opacity = '1';
+        messagesSection.style.opacity = '1';
     });
 });

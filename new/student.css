@@ -205,14 +205,18 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
 .dashboard-overview {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1.5rem; /* Reduced padding */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: auto; /* Let content determine height */
 }
+
 
 .dashboard-overview h1 {
     font-size: 1.8rem;
@@ -261,6 +265,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: all 0.3s ease;
 }
 
 .search-bar input {
@@ -298,17 +303,41 @@ body {
 }
 
 /* Reviews Section */
+/* Reviews Section */
 .reviews {
     background-color: #fff;
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.reviews h2 {
+.reviews.expanded {
+    position: fixed;
+    top: 100px; /* Adjust based on your navbar height */
+    left: 80px; /* Adjust based on your sidebar width */
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000; /* Ensure it overlays everything */
+    padding: 2rem; /* Reduced padding */
+    background-color: #fff; /* Ensure it has a solid background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.reviews.expanded .close-btn {
+    display: block; /* Show close button when expanded */
+    position: absolute;
+    top: 20px;
+    right: 20px;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+    color: #ff6f61;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.reviews.expanded .close-btn:hover {
+    color: #ff3b2f;
 }
 
 .review-list {
@@ -323,6 +352,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .review-item:hover {
@@ -339,12 +369,12 @@ body {
     font-size: 1rem;
     color: #666;
 }
-
 /* Popular Jobs and Messages */
 .jobs-messages-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
+    transition: all 0.3s ease;
 }
 
 .popular-jobs {
@@ -352,7 +382,10 @@ body {
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 1rem; /* Add margin to cover dashboard overview */
 }
+
 
 .popular-jobs h2 {
     font-size: 1.5rem;
@@ -389,11 +422,27 @@ body {
     color: #666;
 }
 
+/* Messages Section */
 .messages {
     background-color: #fff;
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.messages.expanded {
+    position: fixed;
+    top: 100px; /* Adjust based on your navbar height */
+    left: 80px; /* Adjust based on your sidebar width */
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000; /* Ensure it overlays everything */
+    padding: 3rem; /* Increase padding when expanded */
+    transform: scale(1); /* Ensure it doesn't scale */
+    background-color: #fff; /* Ensure it has a solid background */
 }
 
 .messages h2 {
@@ -414,6 +463,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .message-item:hover {
@@ -429,6 +479,81 @@ body {
 .message-item p {
     font-size: 1rem;
     color: #666;
+}
+/* Close Button for Expanded Messages */
+/* Close Button for Expanded Messages */
+.close-btn {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #ff6f61;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.messages.expanded .close-btn {
+    display: block; /* Show only when expanded */
+}
+
+.close-btn:hover {
+    color: #ff3b2f;
+}
+message-input-bar {
+    display: none; /* Hide by default */
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.messages.expanded .message-input-bar {
+    display: flex; /* Show only when expanded */
+}
+
+/* Message Input Bar */
+.message-input-bar {
+    display: none; /* Hide by default */
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%; /* Make it full width */
+}
+
+.messages.expanded .message-input-bar {
+    display: flex; /* Show only when expanded */
+}
+
+.message-input-bar input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%; /* Make input full width */
+}
+
+.message-input-bar input:focus {
+    border-color: #ff6f61;
+}
+
+.message-input-bar button {
+    padding: 0.75rem 1rem;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.message-input-bar button:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.05);
 }
 
 /* Responsive Styles */
