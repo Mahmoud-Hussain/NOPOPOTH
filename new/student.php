@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="notifications">
-            <span class="icon">🔔</span>
+            <span class="icon"><i class="fas fa-bell"></i></span> <!-- Updated to Font Awesome bell icon -->
         </div>
     </nav>
 
