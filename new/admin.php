@@ -151,17 +151,17 @@
                     <div class="job-item" name="job-item-1">
                         <h3 name="job-title-1">Web Developer</h3>
                         <p name="job-description-1">Looking for a skilled web developer to build a responsive website.</p>
-                        <p name="job-price-1"><strong>Budget:</strong> $2000</p>
+                        <p name="job-price-1"><strong>Budget:</strong> 20000/-</p>
                     </div>
                     <div class="job-item" name="job-item-2">
                         <h3 name="job-title-2">Graphic Designer</h3>
                         <p name="job-description-2">Need a graphic designer for logo and branding.</p>
-                        <p name="job-price-2"><strong>Budget:</strong> $500</p>
+                        <p name="job-price-2"><strong>Budget:</strong> 12000/-</p>
                     </div>
                     <div class="job-item" name="job-item-3">
                         <h3 name="job-title-3">Content Writer</h3>
                         <p name="job-description-3">Hiring a content writer for blog posts and articles.</p>
-                        <p name="job-price-3"><strong>Budget:</strong> $300</p>
+                        <p name="job-price-3"><strong>Budget:</strong> 10000/-</p>
                     </div>
                 </div>
             </section>
