@@ -156,4 +156,5 @@ document.addEventListener("DOMContentLoaded", function () {
       e.stopPropagation();
       reviewsSection.classList.remove("expanded");
     });
+    
   });
