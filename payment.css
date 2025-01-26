@@ -52,7 +52,7 @@ h1 {
     color: #ff6f61;
 }
 
-/* TailwindCSS is included via CDN for additional styling */
+
 
   .close:hover,
   .close:focus {
@@ -60,30 +60,4 @@ h1 {
     text-decoration: none;
     cursor: pointer;
   }
-/* payment.css */
-/*body {
-/*    background-color: #ffffff;
-/*}
-/*
-/*.payment-method {
-/*    transition: background-color 0.3s ease, border 0.3s ease;
-/*}
-/*
-/*.payment-method:hover {
-/*    background-color: #fde68a;
-/*    cursor: pointer;
-/*}
-/*
-/*.container {
-/*    padding-top: 10px;
-/*}
-/*
-/*button:hover {
-/*    background-color: #ea580c;
-/*}
-/*
-/*h1 {
-/*    color: #ea580c;
-/*}*/
 
-/* TailwindCSS is included via CDN for additional styling */
