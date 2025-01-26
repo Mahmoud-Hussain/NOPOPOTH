@@ -15,16 +15,27 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <div class="logo">
-      <img src="image/logo.png" alt="Nobopoth Logo">
-      <span>Nobopoth</span>
+        <img src="image/logo.png" alt="Nobopoth Logo">
+        <span>Nobopoth</span>
     </div>
     <a href="#">Dashboard</a>
+    <a href="mygigs.html">My Gigs</a>
     <a href="#">Orders</a>
-    <a href="#">Earnings</a>
+    <a href="#" class="category">
+        Category
+        <span class="arrow">&#9654;</span> <!-- Arrow icon -->
+    </a>
+    <div class="sub-list">
+        <a href="#">Web Development</a>
+        <a href="#">Graphic Design</a>
+        <a href="#">Writing</a>
+        <a href="#">Digital Marketing</a>
+        <a href="#">Video & Animation</a>
+    </div>
     <a href="#">Messages</a>
     <a href="#">Settings</a>
     <a href="#">Logout</a>
-  </div>
+</div>
 
   <!-- Menu Icon -->
   <div class="menu-icon-container">
@@ -100,19 +111,17 @@
 
         <!-- Reviews -->
         <section class="reviews">
-          <section class="reviews">
-            <h2>Reviews</h2>
-            <div class="review-list">
-              <div class="review-item">
-                <h3>Review Title 1</h3>
-                <p>Content of review 1.</p>
-              </div>
-              <div class="review-item">
-                <h3>Review Title 2</h3>
-                <p>Content of review 2.</p>
-              </div>
+          <h2>Reviews</h2>
+          <div class="review-list">
+            <div class="review-item">
+              <h3>Review Title 1</h3>
+              <p>Content of review 1.</p>
             </div>
-          </section>
+            <div class="review-item">
+              <h3>Review Title 2</h3>
+              <p>Content of review 2.</p>
+            </div>
+          </div>
         </section>
       </div>
     </div>

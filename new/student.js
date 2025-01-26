@@ -26,6 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.classList.remove('active');
     });
 
+    // Toggle Sub-List for Categories
+    const categoryLink = document.querySelector('.sidenav .category');
+    if (categoryLink) {
+        categoryLink.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            this.classList.toggle('active'); // Toggle active class
+            const subList = this.nextElementSibling; // Get the sublist
+            if (subList && subList.classList.contains('sub-list')) {
+                subList.style.display = this.classList.contains('active') ? 'block' : 'none'; // Toggle sublist visibility
+            }
+        });
+    }
+
     // Expand/Collapse Messages Section
     const messagesSection = document.querySelector('.messages');
     const messageItems = document.querySelectorAll('.message-item');
@@ -54,6 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
         <button><i class="fas fa-paper-plane"></i></button>
     `;
     messagesSection.appendChild(messageInputBar);
+
+    // Review input bar
+    const reviewInputBar = document.createElement('div');
+    reviewInputBar.className = 'review-input-bar';
+    reviewInputBar.innerHTML = `
+        <input type="text" placeholder="Type your review...">
+        <button><i class="fas fa-paper-plane"></i></button>
+    `;
+    reviewsSection.appendChild(reviewInputBar);
 
     // Expand messages section
     messageItems.forEach(messageItem => {
@@ -92,12 +114,12 @@ document.addEventListener('DOMContentLoaded', function () {
             reviewsSection.classList.add('expanded');
 
             // Shrink and fade other sections
-            dashboardSearchContainer.style.transform = 'scale(1)';
-            popularJobs.style.transform = 'scale(1)';
-            messagesSection.style.transform = 'scale(1)';
-            dashboardSearchContainer.style.opacity = '1';
-            popularJobs.style.opacity = '1';
-            messagesSection.style.opacity = '1';
+            dashboardSearchContainer.style.transform = 'scale(0.8)';
+            popularJobs.style.transform = 'scale(0.8)';
+            messagesSection.style.transform = 'scale(0.8)';
+            dashboardSearchContainer.style.opacity = '0.5';
+            popularJobs.style.opacity = '0.5';
+            messagesSection.style.opacity = '0.5';
         });
     });
 
