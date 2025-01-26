@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const sidenav = document.getElementById('mySidenav');
     const mainContent = document.getElementById('main');
+    const navbar = document.querySelector('.navbar'); // Get the navbar
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
     document.body.appendChild(overlay);
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.menu-icon').addEventListener('click', () => {
         sidenav.style.width = '250px';
         mainContent.classList.add('shifted');
+        navbar.classList.add('shifted'); // Add shifted class to navbar
         overlay.classList.add('active');
     });
 
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.sidenav .closebtn').addEventListener('click', () => {
         sidenav.style.width = '0';
         mainContent.classList.remove('shifted');
+        navbar.classList.remove('shifted'); // Remove shifted class from navbar
         overlay.classList.remove('active');
     });
 
@@ -23,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.addEventListener('click', () => {
         sidenav.style.width = '0';
         mainContent.classList.remove('shifted');
+        navbar.classList.remove('shifted'); // Remove shifted class from navbar
         overlay.classList.remove('active');
     });
 
