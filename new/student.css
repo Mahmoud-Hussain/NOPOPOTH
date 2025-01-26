@@ -326,23 +326,25 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .reviews.expanded {
     position: fixed;
-    top: 100px;
-    left: 80px;
+    top: 100px; /* Adjust based on your navbar height */
+    left: 80px; /* Adjust based on your sidebar width */
     right: 20px;
     bottom: 20px;
-    z-index: 1000;
-    padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
+    z-index: 1000; /* Ensure it overlays everything */
+    padding: 3rem; /* Increase padding when expanded */
+    transform: scale(1); /* Ensure it doesn't scale */
+    background-color: #fff; /* Ensure it has a solid background */
+    overflow-y: auto; /* Add scroll if content overflows */
 }
 
 .reviews.expanded .close-btn {
-    display: block;
+    display: block; /* Show close button when expanded */
     position: absolute;
     top: 20px;
     right: 20px;
@@ -388,7 +390,7 @@ body {
 
 /* Review Input Bar */
 .review-input-bar {
-    display: none;
+    display: none; /* Hide by default */
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
@@ -397,7 +399,7 @@ body {
 }
 
 .reviews.expanded .review-input-bar {
-    display: flex;
+    display: flex; /* Show only when expanded */
 }
 
 .review-input-bar input {
